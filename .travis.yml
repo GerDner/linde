@@ -25,8 +25,8 @@ install:
   # Set the correct project to deploy to
   - gcloud config set project ${project_id}
   - gcloud -q components update
-  - gcloud auth activate-service-account --key-file client-secret.json
-  
+  - gcloud auth activate-service-account 26182002898-compute@developer.gserviceaccount.com --key-file client-secret.json
+
 script:
   # Run the unit tests
   - echo "test"
