@@ -1,0 +1,8 @@
+# Use Dockerized infrastructure
+sudo: false
+language: php
+# Cache our Gcloud SDK between commands
+cache:
+  directories:
+    - "$HOME/google-cloud-sdk/"
+
