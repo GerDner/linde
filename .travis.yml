@@ -18,14 +18,15 @@ before_install:
     fi
   - ls -la
   # Here we use the decrypted service account credentials to authenticate the command line tool
-  - gcloud auth activate-service-account --key-file client-secret.json
+
 
 # [END auth]
 install:
   # Set the correct project to deploy to
   - gcloud config set project ${project_id}
   - gcloud -q components update
-
+  - gcloud auth activate-service-account --key-file client-secret.json
+  
 script:
   # Run the unit tests
   - echo "test"
