@@ -7,7 +7,7 @@ cache:
   - $HOME/google-cloud-sdk/
 
 env:
-  - PROJECT_ID=container-test-1233
+  - PROJECT_ID=container-test-1233  PATH=$PATH:${HOME}/google-cloud-sdk/bin CLOUDSDK_CORE_DISABLE_PROMPTS=1
 
 before_install:
   - openssl aes-256-cbc -K $encrypted_1af3bc10b2a4_key -iv $encrypted_1af3bc10b2a4_iv -in client-secret.json.enc -out client-secret.json -d
